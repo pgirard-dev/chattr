@@ -1,0 +1,82 @@
+/** import relative to the sheet**/
+@import url("base.css");
+
+body {
+		background-color: white;
+		background-attachment: fixed;
+}
+h1 {
+	font-size: 36px;
+	margin: 0px;
+	color: white;
+}
+header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+}
+
+#message_controls {
+	position: fixed;
+	text-align: right;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+	/**background-color: #89CAFF;**/
+	background-color: RGBA(137,202,255, 0.4);
+}
+#controls {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#controls input {
+	width: 75%;
+	background-color: RGBA(256,256,256, 0.95);
+}
+#message {
+	height: 25px;
+	padding-left: 4px;
+	font-size: 16px;
+	border: 1px solid #6B767F;
+}
+#conversation {
+	padding-top: 20px;
+	text-align: right;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 64px;
+}
+#conversation p {
+	font-size: 20px;
+	padding: 5px;
+	display: inline-block;
+	
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.msg-creator {
+	background-color: #89CAFF;
+}
+.msg-non-creator {
+	background-color: #D5ECFF;
+}
+
+button {
+	font-size: 16px;
+	background-color: #f6f6f6;
+	color: #2d2d2d;
+	border: 1px solid #6B767F;
+	padding: 5px;
+	 -webkit-transition: border-radius 0.4s; /* For Safari 3.1 to 6.0 */
+    transition: border-radius 0.4s;
+}
+button:hover {
+	border-radius: 20px;
+	cursor: pointer;
+	 -webkit-transition: border-radius 0.4s; /* For Safari 3.1 to 6.0 */
+    transition: border-radius 0.4s;
+}

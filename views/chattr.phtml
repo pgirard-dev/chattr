@@ -1,0 +1,68 @@
+<header>
+	<h1  OnClick="location.href='http://chattr.info/';"><?php echo $urlParams ?></h1>
+</header>
+<div id="conversation"></div>
+
+<section id="message_controls">
+	<div id="controls">
+		<input id="message" name="message" type="text" >
+		<input type="hidden" id="hashtag" name="hashtag" value="<?php echo $urlParams?>" />
+		<button id="submit">Submit</button>
+	</div>
+	
+</section>
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>	
+<script language="javascript" src="script/getHashtagContent.js"></script> 
+<script language="javascript" src="script/postMessage.js"></script>
+<script>
+/** on the load of the page **/
+// get the content 
+$.getHashtagContent();
+
+	
+// set the focus on the input
+$("#message").focus();
+
+
+
+/** submit messages **/
+// submit a message if the submit button is clicked 
+$("#submit").click(function () {
+	submit();
+});
+
+// detect enter key press to submit the message
+$("#message").keyup(function (e) {
+    if (e.keyCode == 13) {
+    	submit();
+    }
+});
+
+/** set the focus **/
+// set the focus on the input field if not already focused on "f" press
+$(document).keypress(function(e) {
+    // if message is not focus
+    if(!$("#message").is(":focus")) {
+    	if(e.which == 13 || e.which == 102) { // if key pressed is enter of f then focus the message
+    		$("#message").focus();
+    	}
+    }
+});
+
+// call the getHastagContent each second
+window.setInterval(function(){
+	$.getHashtagContent();
+}, 1000);
+
+
+function submit() {
+	
+	$.postMessage();
+	$.getHashtagContent();
+	
+	$("#message").val("");
+	$("#message").focus();
+	$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+}
+</script>

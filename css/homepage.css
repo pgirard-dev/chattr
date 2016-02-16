@@ -1,0 +1,87 @@
+/** import relative to the sheet**/
+@import url("base.css");
+@media screen and (max-width: 640px){
+	#conversation {
+		max-width: 500px;
+	}
+}
+@media screen and (min-width: 641px){
+	#conversation {
+		width: 500px;
+	}
+}
+body {
+	margin: auto;
+	text-align: center;
+	background-color: white;
+	background-image: url("../img/britain.jpg");
+}
+
+header {
+	height: 100px;
+}
+h1 {
+	font-weight: 100;
+	font-size: 60px; 
+	color: white;
+}
+section {
+	border-top: 1px solid silver;
+	padding-bottom: 35px;
+	border-bottom: 1px solid silver;
+	/** 
+	background-color: RGBA(137,202,255, 0.4);
+	 **/
+	background-color: RGBA(200,200,200,0.4);
+	
+}
+
+#conversation {
+	height: 34px;
+	font-size: 26px;
+	font-family: Lato, serif;
+	font-weight: 300;
+	padding-left: 4px;
+	/*border: 1px solid #5F8CB1;*/
+	border: 1px solid silver;
+	border-radius: 0px;
+	background-color: RGBA(200,200,200,0.4);
+	color: white;
+}
+
+/** placeholder color **/
+::-webkit-input-placeholder {
+   color: #dddddd;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #dddddd;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #dddddd;  
+}
+
+:-ms-input-placeholder {  
+   color: #dddddd;  
+}
+
+#search-button {
+	margin-top: 20px;
+	font-size: 16px;
+	background-color: #f6f6f6;
+	font-family: Lato, serif;
+	font-weight: 400;
+	border: 1px solid #5F8CB1;
+	color: black; 
+	/*#416685*/
+	padding: 10px;
+	 -webkit-transition: border-radius 0.4s; /* For Safari 3.1 to 6.0 */
+    transition: border-radius 0.4s;
+}
+#search-button:hover {
+	border-radius: 20px;
+	cursor: pointer;
+	 -webkit-transition: border-radius 0.4s; /* For Safari 3.1 to 6.0 */
+    transition: border-radius 0.4s;
+}

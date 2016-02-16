@@ -1,0 +1,1 @@
+This directory is protected since it contains password to access the database
