@@ -1,4 +1,3 @@
 
-Application de chat en temps réel avec du AJAX http://girardlariviere.com/chattr.info/ 
-
+Application de chat en temps réel avec du AJAX
 Créer par Philippe Girard
